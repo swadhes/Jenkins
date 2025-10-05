@@ -17,14 +17,15 @@ RUN mvn clean package -DskipTests
 # Runtime stage
 FROM eclipse-temurin:17-jre-alpine
 
-# Set working directory
+# Set working directory  
 WORKDIR /app
 
 # Copy the jar from build stage
 COPY --from=build /app/target/*.jar app.jar
 
 # Expose port
-EXPOSE 8080
+# Expose port
+EXPOSE 8081
 
 # Set default profile (can be overridden)
 ENV SPRING_PROFILES_ACTIVE=prod
