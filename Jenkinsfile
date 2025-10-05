@@ -27,7 +27,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh './mvnw test'
+                sh './mvnw test -Dspring.profiles.active=test'
             }
             post {
                 always {
