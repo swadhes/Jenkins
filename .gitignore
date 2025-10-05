@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Docker ###
+*.tar
+*.log
+
+### Jenkins ###
+.jenkins/
